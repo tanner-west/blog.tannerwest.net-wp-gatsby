@@ -31,7 +31,7 @@ body {
 }
 
 
-p{
+p, span{
   font-family: 'Open Sans', sans-serif;
 
 }
@@ -87,10 +87,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 mark {
   background-color: #ff0;
   color: #000;
@@ -259,7 +256,6 @@ h1 {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
   line-height: 1.1;
 }
 h2 {
@@ -275,7 +271,6 @@ h2 {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 4.24rem;
   line-height: 1.1;
   position: relative;
 }
@@ -302,7 +297,6 @@ h3 {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 2.618rem;
   line-height: 1.1;
 }
 h4 {
@@ -318,7 +312,6 @@ h4 {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 1.618rem;
   line-height: 1.1;
 }
 h5 {
@@ -335,7 +328,6 @@ h5 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
   line-height: 1.1;
 }
 h6 {
@@ -352,7 +344,6 @@ h6 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
   line-height: 1.1;
 }
 hgroup {
@@ -652,6 +643,21 @@ pre tt:after {
 h1, h2, h3, h4{
   font-family: 'Archivo Black', sans-serif;
   font-weight: normal;
+}
+h1{
+
+}
+
+h2{
+
+}
+
+h3 {
+
+}
+
+h4{
+
 }
 @media only screen and (max-width: 480px) {
   html {

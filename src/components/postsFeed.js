@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import * as moment from "moment"
 
 
@@ -12,6 +12,7 @@ const PostsFeed = () => {
             title
             excerpt
             date
+            path
           }
         }
       }
@@ -22,11 +23,11 @@ const PostsFeed = () => {
       <h2 className="homePageHeading">Posts</h2>
       {data.allWordpressPost.edges.map(edge => {
         return (
-          <div>
-            <h3>{edge.node.title}</h3>
+          <Link to={`/posts/${edge.node.path}`} style={{textDecoration: "none", color: "white"}}>
+            <h3 style={{marginBottom: 0}}>{edge.node.title}</h3>
             <p>{moment(edge.node.date).format("MMM DD, YYYY")}</p>
             <p dangerouslySetInnerHTML={{__html: edge.node.excerpt}}></p>
-          </div>
+          </Link>
         )
       })}
     </div>

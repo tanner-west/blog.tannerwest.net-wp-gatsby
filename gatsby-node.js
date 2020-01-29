@@ -30,6 +30,19 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allWordpressPost {
+        edges {
+          node {
+            title
+            excerpt
+            date
+            path
+            slug
+            content
+            id
+          }
+        }
+      }
     }
   `)
 
@@ -51,5 +64,25 @@ exports.createPages = async ({ graphql, actions }) => {
         content: edge.node.content,
       },
     })
+
+    
+  })
+
+  result.data.allWordpressPost.edges.forEach(edge => {
+    createPage({
+      // will be the url for the page
+      path: `posts/${edge.node.slug}`,
+      // specify the component template of your choice
+      component: slash(postTemplate),
+      // In the ^template's GraphQL query, 'id' will be available
+      // as a GraphQL variable to query for this posts's data.
+      context: {
+        id: edge.node.id,
+        title: edge.node.title,
+        content: edge.node.content,
+      },
+    })
+
+    
   })
 }

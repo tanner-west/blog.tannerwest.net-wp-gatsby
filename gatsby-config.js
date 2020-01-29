@@ -44,7 +44,6 @@ module.exports = {
           // to access endpoints that are protected with .htaccess.
           htaccess_user: process.env.WP_USER,
           htaccess_pass: process.env.WP_PASSWORD,
-
           htaccess_sendImmediately: false,
         },
       },
