@@ -14,9 +14,11 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 1500,
         padding: `1.45rem 1.0875rem`,
+        display: "flex",
+        justifyContent: "center"
       }}
     >
-      {/* <h1 style={{ margin: 0 }}>
+      <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,7 +28,7 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1> */}
+      </h1>
     </div>
   </header>
 )
