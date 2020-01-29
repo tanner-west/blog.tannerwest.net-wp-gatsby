@@ -26,7 +26,7 @@ const PostsFeed = () => {
           <Link to={`/posts/${edge.node.path}`} style={{textDecoration: "none", color: "white"}}>
             <h3 style={{marginBottom: 0}}>{edge.node.title}</h3>
             <p>{moment(edge.node.date).format("MMM DD, YYYY")}</p>
-            <p dangerouslySetInnerHTML={{__html: edge.node.excerpt}}></p>
+            <div dangerouslySetInnerHTML={{__html: edge.node.excerpt}}></div>
           </Link>
         )
       })}

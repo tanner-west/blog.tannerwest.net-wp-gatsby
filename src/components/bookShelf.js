@@ -90,12 +90,12 @@ const BookShelf = () => {
               <h4 style={{ marginBottom: 10, fontFamily: "'Open Sans', sans-serif" }}>
                 {edge.node.acf.book_author.post_title}
               </h4>
-              <p
+              <div
                 style={{ marginBottom: 10 }}
                 dangerouslySetInnerHTML={{
                   __html: truncateText(edge.node.excerpt),
                 }}
-              ></p>
+              ></div>
             </div>
           )
         })}
